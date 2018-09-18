@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Post from './Post'
+import { PostService } from './services/post.service';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,10 @@ import Post from './Post'
 
 export class AppComponent {
 
- posts:Post[] = [
-		new Post('Mon premiere Post',"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500"),
-		new Post('Mon deuxieme Post',"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500"),
-		new Post('Mon troisieme Post',"Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500")
-	]
+	constructor() {
+   
+  }
+
+
 
 }

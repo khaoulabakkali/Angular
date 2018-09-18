@@ -1,5 +1,6 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import Post from '../Post'
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-list-item',
@@ -7,19 +8,24 @@ import Post from '../Post'
   styleUrls: ['./app-list-item.component.scss']
 })
 export class AppListItemComponent implements OnInit {
+ 
+ @Input() post:Post
 
- @Input() post:Post 
-
-  constructor() { }
+  constructor(private postService:PostService) { }
 
   ngOnInit() {
   }
 
   love(post){
-  	post.loveIts++
+    this.postService.loveIt(post)
   }
 
    dontLove(post){
-  	post.loveIts--
+    this.postService.dontLoveIt(post)
   }
+
+  remove(post){
+    this.postService.deletePost(post)
+  }
+
 }

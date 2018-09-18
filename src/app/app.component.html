@@ -1,2 +1,10 @@
-<app-list [posts]="posts"></app-list>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="navbar-nav">
+            <a style="cursor:pointer" class="nav-item nav-link" routerLink="/" routerLinkActive="active">Posts</a>
+            <a style="cursor:pointer" class="nav-item nav-link" routerLink="/new" routerLinkActive="active">Nouveau Post</a>
+          </div>
+      </nav>
+
+   
+<router-outlet></router-outlet>
 
